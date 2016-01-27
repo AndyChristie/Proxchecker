@@ -48,7 +48,7 @@ def main():
         t = ThreadUrl(queue)
         t.setDaemon(True)
         t.start()
-    hosts = [host.strip() for host in open(input_file).readlines()]
+    hosts = [host.strip() for host in open(input_file)]
     #populate queue with data   
     for host in hosts:
         queue.put(host)
